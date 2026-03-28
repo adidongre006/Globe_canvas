@@ -393,7 +393,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
   };
   /* ---------------- Material ---------------- */
   useEffect(() => {
-    const globeMaterial = globe.globeMaterial() as {
+    const globeMaterial = globe.globeMaterial() as unknown as {
       color: Color;
       emissive: Color;
       emissiveIntensity: number;
