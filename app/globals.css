@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0d1117;
+  --card: rgba(22, 27, 34, 0.72);
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --accent: #2f81f7;
+  --accent2: #58a6ff;
+  --green: #3fb950;
+}
+
+html,
+body,
+:root {
+  height: 100%;
+  background: var(--bg);
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+body {
+  color: var(--text);
+  background:
+    radial-gradient(circle at 18% 12%, rgba(47,129,247,0.11), transparent 22%),
+    radial-gradient(circle at 85% 18%, rgba(63,185,80,0.05), transparent 20%),
+    radial-gradient(circle at 50% 90%, rgba(88,166,255,0.06), transparent 30%),
+    linear-gradient(180deg, #0d1117 0%, #0b1016 100%);
+}
+
+.glass {
+  background: rgba(22, 27, 34, 0.58);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow:
+    0 10px 40px rgba(0,0,0,0.34),
+    inset 0 1px 0 rgba(255,255,255,0.03);
+}
+
+.glow-blue {
+  box-shadow:
+    0 0 22px rgba(47,129,247,0.16),
+    0 0 70px rgba(47,129,247,0.07);
+}
+
+.glow-green {
+  box-shadow:
+    0 0 22px rgba(63,185,80,0.16),
+    0 0 70px rgba(63,185,80,0.07);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #ffffff 0%, #58a6ff 52%, #3fb950 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(circle at center, black 30%, transparent 88%);
+}
+
+.noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.015;
+  pointer-events: none;
+  background-image: radial-gradient(#fff 0.6px, transparent 0.6px);
+  background-size: 14px 14px;
+}
+.margin{
+  margin-top: 50px;
+}
